@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bfc2079-1dbe-4621-a9e5-4ba1a7fe7aa5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/diploma/gui/components/PairComparing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/diploma/gui/components/PairComparing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/diploma/gui/screens/RatiosScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/diploma/gui/screens/RatiosScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -86,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RatiosScreen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RatiosScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/diploma/gui/screens/RatiosScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+            <state relative-caret-position="-37">
+              <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#417#418#0" expanded="true" />
@@ -100,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PairComparing.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PairComparing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/diploma/gui/components/PairComparing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+            <state relative-caret-position="870">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,8 +187,8 @@
         <option value="$PROJECT_DIR$/src/org/diploma/gui/SimpleTable.java" />
         <option value="$PROJECT_DIR$/src/org/diploma/gui/PairComparing.java" />
         <option value="$PROJECT_DIR$/src/org/diploma/gui/components/SimpleTable.java" />
-        <option value="$PROJECT_DIR$/src/org/diploma/gui/screens/RatiosScreen.java" />
         <option value="$PROJECT_DIR$/src/org/diploma/gui/components/PairComparing.java" />
+        <option value="$PROJECT_DIR$/src/org/diploma/gui/screens/RatiosScreen.java" />
       </list>
     </option>
   </component>
@@ -305,12 +302,12 @@
       <workItem from="1528449793546" duration="17000" />
       <workItem from="1528452441841" duration="227000" />
       <workItem from="1528453530976" duration="8136000" />
-      <workItem from="1528465349760" duration="5679000" />
+      <workItem from="1528465349760" duration="5764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17442000" />
+    <option name="totallyTimeSpent" value="17527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -327,12 +324,12 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32969698" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -350,14 +347,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/org/diploma/gui/components/PairComparing.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="9" />
     </breakpoint-manager>
   </component>
@@ -762,24 +751,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/diploma/gui/screens/RatiosScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/org/diploma/gui/components/PairComparing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        <state relative-caret-position="870">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/diploma/gui/components/PairComparing.java">
+    <entry file="file://$PROJECT_DIR$/src/org/diploma/gui/screens/RatiosScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+        <state relative-caret-position="-37">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
           </folding>
         </state>
       </provider>
