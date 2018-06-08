@@ -19,7 +19,7 @@ public class PairComparing extends JTable {
     private static Object[][] prepareData(final List<String> pairs) {
         final Object[][] data = new Object[pairs.size() + 1][];
         for (int i = 0; i < pairs.size(); i++) {
-            final Object[] row = new Object[pairs.size() + 2];
+            final Object[] row = new Object[pairs.size() + 3];
             row[0] = pairs.get(i);
             for (int j = 0; j < pairs.size(); j++) {
                 if (j + 1 == i + 1) {
@@ -28,6 +28,7 @@ public class PairComparing extends JTable {
                     row[j + 1] = "";
                 }
             }
+            row[row.length - 2] = "";
             row[row.length - 1] = "";
             data[i] = row;
         }
@@ -35,12 +36,13 @@ public class PairComparing extends JTable {
     }
 
     private static Object[] prepareHeaders(final String name, final List<String> pairs) {
-        final Object[] headers = new Object[pairs.size() + 2];
+        final Object[] headers = new Object[pairs.size() + 3];
         headers[0] = name;
         for (int i = 0; i < pairs.size(); i++) {
             headers[i + 1] = pairs.get(i);
         }
-        headers[headers.length - 1] = "Лок.";
+        headers[headers.length - 2] = "Лок.";
+        headers[headers.length - 1] = "Норм.";
 
         return headers;
     }
@@ -57,7 +59,7 @@ public class PairComparing extends JTable {
 
         @Override
         public boolean isCellEditable(int row, int column) {
-            return column >= 1 && row != column && row < (getRowCount() - 1);
+            return column >= 1 && (column < getColumnCount() - 2) && row != column && row < (getRowCount() - 1);
         }
 
         @Override

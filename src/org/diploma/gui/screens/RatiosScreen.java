@@ -4,6 +4,7 @@ import org.diploma.gui.CanGoNext;
 import org.diploma.gui.HasDependency;
 import org.diploma.gui.Screens;
 import org.diploma.gui.components.PairComparing;
+import org.diploma.gui.components.SimpleTable;
 
 import javax.swing.*;
 import java.awt.*;
@@ -35,18 +36,24 @@ public class RatiosScreen extends JPanel implements CanGoNext, HasDependency {
                       final java.util.List<String> alternatives) {
         if (initial) {
             addTargetTitle(target);
-            final JScrollPane scroll = new JScrollPane();
-            scroll.add(createPairComparing(CRITERIAS_RATIO, criterias));
-//            for(final String criteria : criterias) {
-//                scroll.add(createPairComparing(criteria, alternatives));
-//            }
-            add(scroll, BorderLayout.CENTER);
+//            final JPanel pane = new JPanel(new CardLayout(10, 5));
+            final JTabbedPane tabbedPane = new JTabbedPane();
+            tabbedPane.add(CRITERIAS_RATIO, new JScrollPane(createPairComparing(CRITERIAS_RATIO, criterias)));
+//            final JScrollPane scroll = new JScrollPane();
+//            pane.add(createPairComparing(CRITERIAS_RATIO, criterias), CRITERIAS_RATIO);
+            for(final String criteria : criterias) {
+                tabbedPane.add(criteria, new JScrollPane(createPairComparing(criteria, alternatives)));
+//                pane.add(new JScrollPane(createPairComparing(criteria, alternatives)), criteria);
+            }
+//            pane.add(new JScrollPane(createPairComparing(CRITERIAS_RATIO, criterias)));
+            add(tabbedPane, BorderLayout.CENTER);
         }
 
 
     }
 
     private Component createPairComparing(final String criteriasRatio, final List<String> criterias) {
+//        return new SimpleTable("12312321", 4);
         return ratiosComponenets.computeIfAbsent(criteriasRatio, k -> new PairComparing(criteriasRatio, criterias));
     }
 
