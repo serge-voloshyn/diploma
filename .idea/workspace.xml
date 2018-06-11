@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bfc2079-1dbe-4621-a9e5-4ba1a7fe7aa5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/diploma/gui/components/PresentationTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/diploma/gui/screens/ResultsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/diploma/gui/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/diploma/gui/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/diploma/gui/Screens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/diploma/gui/Screens.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/diploma/gui/components/PairComparing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/diploma/gui/components/PairComparing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/diploma/gui/screens/RatiosScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/diploma/gui/screens/RatiosScreen.java" afterDir="false" />
-    </list>
+    <list default="true" id="1bfc2079-1dbe-4621-a9e5-4ba1a7fe7aa5" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,8 +105,8 @@
       <file leaf-file-name="ResultsScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/diploma/gui/screens/ResultsScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+            <state relative-caret-position="339">
+              <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -299,12 +291,12 @@
       <workItem from="1528453530976" duration="8136000" />
       <workItem from="1528465349760" duration="11263000" />
       <workItem from="1528715332721" duration="8000" />
-      <workItem from="1528715365117" duration="3923000" />
+      <workItem from="1528715365117" duration="4352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26957000" />
+    <option name="totallyTimeSpent" value="27386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -780,8 +772,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/diploma/gui/screens/ResultsScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+        <state relative-caret-position="339">
+          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
