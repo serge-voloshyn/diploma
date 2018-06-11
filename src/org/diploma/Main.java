@@ -34,9 +34,13 @@ public class Main {
 //
 //        final ConstructionCalculator calculator = ConstructionCalculator.INSTANCE;
 
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         SwingUtilities.invokeLater(MainFrame::buildAndShow);
     }
-
 
 
     public static final class Alternatives {
