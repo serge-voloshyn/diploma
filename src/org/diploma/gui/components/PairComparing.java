@@ -10,9 +10,20 @@ import java.util.stream.Collectors;
 public class PairComparing extends JTable {
     public PairComparing(final String name, final List<String> pairs) {
         super(new Model(name, pairs));
+        getColumnModel().getColumn(0).setMaxWidth(160);
+        getColumnModel().getColumn(0).setPreferredWidth(120);
         setFillsViewportHeight(true);
         setShowGrid(true);
         setGridColor(Color.lightGray);
+    }
+
+    private static String reverse(final String value) {
+        if (value == null) {
+            return null;
+        }
+        if (value.contains("/"))
+            return new StringBuilder(value).reverse().toString();
+        return "1/" + value;
     }
 
     private static Object[][] prepareData(final List<String> pairs, final Map<String, String> ratio) {
@@ -25,7 +36,7 @@ public class PairComparing extends JTable {
                     row[j + 1] = "1";
                 } else {
                     row[j + 1] =
-                            ratio.getOrDefault(row[0] + "_" + pairs.get(j), ratio.get(pairs.get(j) + "_" + row[0]));
+                            ratio.getOrDefault(row[0] + "_" + pairs.get(j), reverse(ratio.get(pairs.get(j) + "_" + row[0])));
                 }
             }
             row[row.length - 2] = "";
@@ -73,23 +84,19 @@ public class PairComparing extends JTable {
             super(prepareData(pairs, Collections.emptyMap()), prepareHeaders(name, pairs));
             this.pairs = pairs;
             this.name = name;
+            calculate();
         }
 
         public Model(final String name, final List<String> pairs, final Map<String, String> ratio) {
             super(prepareData(pairs, ratio), prepareHeaders(name, pairs));
             this.pairs = pairs;
             this.name = name;
+            calculate();
         }
 
         @Override
         public boolean isCellEditable(int row, int column) {
             return column >= 1 && (column < getColumnCount() - 2) && row != column - 1;
-        }
-
-        private String reverse(final String value) {
-            if (value.contains("/"))
-                return new StringBuilder(value).reverse().toString();
-            return "1/" + value;
         }
 
         private double evaluate(final String value) {
@@ -105,13 +112,7 @@ public class PairComparing extends JTable {
             }
         }
 
-        @Override
-        public void setValueAt(Object aValue, int row, int column) {
-            pairsRatio.put(pairs.get(row) + "_" + pairs.get(column - 1), Objects.toString(aValue, "1"));
-            super.setValueAt(aValue, row, column);
-            super.setValueAt(reverse(Objects.toString(aValue, "1")), column - 1, row + 1);
-
-
+        private void calculate() {
             double fullSum = 0.0;
 
             for (int rowNum = 0; rowNum < getRowCount(); rowNum++) {
@@ -135,6 +136,14 @@ public class PairComparing extends JTable {
                     //skipped
                 }
             }
+        }
+
+        @Override
+        public void setValueAt(Object aValue, int row, int column) {
+            pairsRatio.put(pairs.get(row) + "_" + pairs.get(column - 1), Objects.toString(aValue, "1"));
+            super.setValueAt(aValue, row, column);
+            super.setValueAt(reverse(Objects.toString(aValue, "1")), column - 1, row + 1);
+            calculate();
         }
 
         public boolean isFullyDefined() {

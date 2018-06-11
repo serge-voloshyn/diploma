@@ -2,6 +2,7 @@ package org.diploma.gui;
 
 import org.diploma.gui.screens.AlternativesAndCriteriasScreen;
 import org.diploma.gui.screens.RatiosScreen;
+import org.diploma.gui.screens.ResultsScreen;
 
 import javax.swing.*;
 import java.awt.*;
@@ -69,6 +70,9 @@ public class MainFrame extends JFrame {
             case Ratios:
                 switchCentral(Screens.getScreen(RatiosScreen.class, RatiosScreen::new));
                 break;
+            case Results:
+                switchCentral(Screens.getScreen(ResultsScreen.class, ResultsScreen::new));
+                break;
         }
     }
 
@@ -89,6 +93,9 @@ public class MainFrame extends JFrame {
             case Ratios:
                 goTo(Screens.Screen.AlternativesAndCriterias);
                 break;
+            case Results:
+                goTo(Screens.Screen.Ratios);
+                break;
         }
     }
 
@@ -103,7 +110,7 @@ public class MainFrame extends JFrame {
                 goTo(Screens.Screen.Ratios);
                 break;
             case Ratios:
-
+                goTo(Screens.Screen.Results);
                 break;
         }
     }

@@ -37,6 +37,10 @@ public class RatiosScreen extends JPanel implements CanGoNext, HasDependency {
         return true;
     }
 
+    public Map<String, PairComparing> getRatios() {
+        return ratiosComponenets;
+    }
+
     private void draw(final String target,
                       final java.util.List<String> criterias,
                       final java.util.List<String> alternatives) {

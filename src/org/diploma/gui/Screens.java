@@ -22,7 +22,6 @@ public class Screens {
             }
             return factory.get();
         });
-//        return (T) screens.computeIfAbsent(screen, k -> factory.get());
     }
 
     @SuppressWarnings("unchecked")
@@ -33,5 +32,6 @@ public class Screens {
     public enum Screen {
         AlternativesAndCriterias,
         Ratios,
+        Results,
     }
 }
