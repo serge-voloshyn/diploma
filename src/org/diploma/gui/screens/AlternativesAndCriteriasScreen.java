@@ -5,6 +5,9 @@ import org.diploma.gui.components.ItemCreation;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
 
 public class AlternativesAndCriteriasScreen extends JPanel implements CanGoNext {
 
@@ -40,6 +43,20 @@ public class AlternativesAndCriteriasScreen extends JPanel implements CanGoNext 
 
     public java.util.List<String> getCriterias() {
         return criterias.getData();
+    }
+
+    public void writeCsvTo(final FileWriter writer) throws IOException {
+        writer.write(String.format("\"Цель\", \"%s\"\n", getTarget()));
+        writer.write("\"\", \"\"\n");
+        final List<String> criterias = getCriterias();
+        final List<String> alternatives = getAlternatives();
+        final int end = criterias.size() > alternatives.size() ? criterias.size() : alternatives.size();
+        writer.write("\"Альтернативы\", \"Критерии\"\n");
+        for (int i = 0; i < end; i++) {
+            writer.write(String.format("\"%s\", \"%s\"\n",
+                    i < alternatives.size() ? alternatives.get(i) : "",
+                    i < criterias.size() ? criterias.get(i) : ""));
+        }
     }
 
     public boolean canGoNext() {

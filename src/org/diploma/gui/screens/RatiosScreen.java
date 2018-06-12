@@ -2,17 +2,19 @@ package org.diploma.gui.screens;
 
 import org.diploma.gui.CanGoNext;
 import org.diploma.gui.HasDependency;
+import org.diploma.gui.HasTable;
 import org.diploma.gui.Screens;
 import org.diploma.gui.components.PairComparing;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.HashMap;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
-public class RatiosScreen extends JPanel implements CanGoNext, HasDependency {
+public class RatiosScreen extends JPanel implements CanGoNext, HasDependency, HasTable {
 
     public static final String CRITERIAS_RATIO = "Критерии";
 
@@ -83,5 +85,12 @@ public class RatiosScreen extends JPanel implements CanGoNext, HasDependency {
         Screens.getScreen(AlternativesAndCriteriasScreen.class).ifPresent(screen ->
                 draw(screen.getTarget(), screen.getCriterias(), screen.getAlternatives())
         );
+    }
+
+    public void writeCsvTo(final FileWriter writer) throws IOException {
+        for (int i = 0; i < tabbedPane.getTabCount(); i++) {
+            final PairComparing component = (PairComparing) ((JScrollPane) tabbedPane.getComponentAt(i)).getViewport().getComponent(0);
+            writeCsvTo(writer, component);
+        }
     }
 }
