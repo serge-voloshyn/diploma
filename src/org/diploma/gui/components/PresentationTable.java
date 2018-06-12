@@ -9,6 +9,9 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+/**
+ * Простая таблица для отображения данных.
+ */
 public class PresentationTable extends JTable {
 
     public PresentationTable(final List<String> columnHeaders, final List<String[]> data) {

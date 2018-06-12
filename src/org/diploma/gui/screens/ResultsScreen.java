@@ -16,6 +16,9 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+/**
+ * Окно результатов вычисления.
+ */
 public class ResultsScreen extends JPanel implements HasDependency, HasTable {
 
     private PresentationTable presentationTable;
@@ -70,6 +73,9 @@ public class ResultsScreen extends JPanel implements HasDependency, HasTable {
         add(title, BorderLayout.PAGE_START);
     }
 
+    /**
+     * Сохранение данных в файл CSV.
+     */
     private void addSaveButton() {
         final JButton button = new JButton("Сохранить");
         button.addActionListener(e -> {
@@ -90,7 +96,7 @@ public class ResultsScreen extends JPanel implements HasDependency, HasTable {
                                     try {
                                         screen.writeCsvTo(writer);
                                         ratios.writeCsvTo(writer);
-                                        writeCsvTo(writer);
+                                        writeCsvTo(writer, presentationTable);
                                     } catch (IOException e1) {
                                         e1.printStackTrace();
                                     }
@@ -118,9 +124,5 @@ public class ResultsScreen extends JPanel implements HasDependency, HasTable {
             }
         });
         add(button, BorderLayout.PAGE_END);
-    }
-
-    public void writeCsvTo(final FileWriter writer) throws IOException {
-        writeCsvTo(writer, presentationTable);
     }
 }

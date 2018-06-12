@@ -7,6 +7,9 @@ import java.awt.*;
 import java.util.Objects;
 import java.util.stream.IntStream;
 
+/**
+ * Таблица динамического размера для формирования альтернатив и критериев.
+ */
 public class ItemCreation extends JPanel implements CanGoNext {
 
     private final SimpleTable table;

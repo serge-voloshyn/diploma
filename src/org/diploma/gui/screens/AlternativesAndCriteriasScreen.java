@@ -9,6 +9,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Окно редактирования альтернатив и критериев.
+ */
 public class AlternativesAndCriteriasScreen extends JPanel implements CanGoNext {
 
     private final JTextField target = new JTextField(60);

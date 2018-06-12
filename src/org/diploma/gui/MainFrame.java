@@ -14,19 +14,19 @@ public class MainFrame extends JFrame {
     private Screens.Screen currentScreen;
 
     private MainFrame() {
-//        setLayout(null);//no layout manager
         setLayout(new BorderLayout(10, 10));//no layout manager
         build();
         setSize(940, 680);//frame size 300 width and 300 height
         setTitle("Метод анализа иерархий");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
-//        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-//        setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
         setLocationRelativeTo(null);
         setVisible(true);
     }
 
+    /**
+     * Формирование элементов окна.
+     */
     private void build() {
         addTitle();
         addCentralPanel();
@@ -37,6 +37,9 @@ public class MainFrame extends JFrame {
         goTo(Screens.Screen.AlternativesAndCriterias);
     }
 
+    /**
+     * Добавление кнопок переходов по окнам.
+     */
     private void addActions() {
         final JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 0));
@@ -52,6 +55,9 @@ public class MainFrame extends JFrame {
         getContentPane().add(panel, BorderLayout.PAGE_END);
     }
 
+    /**
+     * Добавление основного заголовка.
+     */
     private void addTitle() {
         final JLabel title = new JLabel("Метод анализа иерархий");
         title.setBounds(0, 50, 100, 100);
@@ -61,6 +67,11 @@ public class MainFrame extends JFrame {
     }
 
 
+    /**
+     * Переход к следующему окну.
+     *
+     * @param screen тип следующего окна.
+     */
     private void goTo(final Screens.Screen screen) {
         currentScreen = screen;
         switch (screen) {
@@ -76,6 +87,11 @@ public class MainFrame extends JFrame {
         }
     }
 
+    /**
+     * Формирование центральной части окна.
+     *
+     * @param component компонент для отбражения в центральной части окна
+     */
     private void switchCentral(final Component component) {
         if (currentComponenet != null) {
             getContentPane().remove(currentComponenet);
@@ -86,6 +102,11 @@ public class MainFrame extends JFrame {
         repaint();
     }
 
+    /**
+     * Переход к предыдущему окну.
+     *
+     * @param actionEvent событие нажатия кнопки
+     */
     private void goBack(ActionEvent actionEvent) {
         switch (currentScreen) {
             case AlternativesAndCriterias:
@@ -99,6 +120,11 @@ public class MainFrame extends JFrame {
         }
     }
 
+    /**
+     * Переход к следующему окну.
+     *
+     * @param actionEvent событие нажатия кнопки
+     */
     private void goNext(ActionEvent actionEvent) {
         if (currentComponenet instanceof CanGoNext) {
             if (!((CanGoNext) currentComponenet).canGoNext()) {
@@ -112,9 +138,14 @@ public class MainFrame extends JFrame {
             case Ratios:
                 goTo(Screens.Screen.Results);
                 break;
+            default:
+                break;
         }
     }
 
+    /**
+     * Создание окна приложения.
+     */
     public static void buildAndShow() {
         new MainFrame();
     }

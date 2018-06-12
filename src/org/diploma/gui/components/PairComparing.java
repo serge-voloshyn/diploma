@@ -7,6 +7,9 @@ import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Таблица попарного сравнения элементов.
+ */
 public class PairComparing extends JTable {
     public PairComparing(final String name, final List<String> pairs) {
         super(new Model(name, pairs));

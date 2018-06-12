@@ -9,6 +9,9 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+/**
+ * Таблица с номером строки в первой колонке.
+ */
 public class SimpleTable extends JTable {
 
     private final String columnHeader;

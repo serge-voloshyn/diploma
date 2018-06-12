@@ -10,10 +10,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
+import java.util.Optional;
 
+/**
+ * Окно попарного сравнения.
+ */
 public class RatiosScreen extends JPanel implements CanGoNext, HasDependency, HasTable {
 
     public static final String CRITERIAS_RATIO = "Критерии";

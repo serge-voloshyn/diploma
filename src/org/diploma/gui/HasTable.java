@@ -1,7 +1,5 @@
 package org.diploma.gui;
 
-import org.diploma.gui.components.PairComparing;
-
 import javax.swing.*;
 import javax.swing.table.TableColumnModel;
 import java.io.FileWriter;
@@ -12,6 +10,13 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 public interface HasTable {
+    /**
+     * Запись таблице в виде CSV
+     *
+     * @param writer запись в файл
+     * @param table  таблица, которую нужно записать
+     * @throws IOException
+     */
     default void writeCsvTo(final FileWriter writer, final JTable table) throws IOException {
         writer.write("\"\", \"\"\n");
 
